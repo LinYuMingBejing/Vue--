@@ -8,7 +8,7 @@ import VueRouter from "vue-router"
 Vue.use(VueRouter)
 
 
-//2.1 導入axios
+// 2.1 導入axios
 // 2.2 安裝 axios
 import axios from 'axios'
 Vue.prototype.$ajax = axios
@@ -29,7 +29,17 @@ import "./lib/mui/css/icons-extra.css"
 
 import router from "./router.js"
 
+
 import app from "./App.vue"
+
+// 導入時間插件
+import moment from "moment"
+
+// 定義全局過濾器
+Vue.filter("dataFormat", function(dataStr, pattern="YYY-MM-DD HH:mm:ss"){
+    moment(dataStr.format(pattern))
+})
+
 
 var vue = new Vue({
     el:"#app",
