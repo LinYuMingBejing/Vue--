@@ -1,16 +1,23 @@
 <template>
     <div class="newsinfo-container">
+        <!-- 大標題 -->
         <h3 class="title">{{ newsinfo.title }}</h3>
+        <!-- 子標題 -->
         <p class="subtitle">
             <span>發表時間:{{ newsinfo.add_time}}</span>
             <span>點擊:{{ newsinfo.click }}次</span>
         </p>
+        <!-- 內容區 -->
         <div class="content" v-html="newsinfo.content"></div>
+    <!-- 評論子組件 -->
+    <comment-box :id="this.id"></comment-box>
     </div>
 </template>
 
 <script>
 import {Toast} from "mint-ui"
+//1. 導入評論子組件
+import comment from "../subcomment/comment.vue"
 export default {
     data(){
         return{
@@ -37,6 +44,9 @@ export default {
                 })
                 
         }
+    },
+    components:{
+        "comment-box":comment
     }
 }
 </script>

@@ -14,12 +14,14 @@
             <router-link to="/home/newslist"><span class="mui-icon mui-icon-home"></span>
 		    <div class="mui-media-body">新聞資訊</div></router-link></li>
 
-		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            <router-link to="/home/photolist">
 		    <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
-		    <div class="mui-media-body">圖片分享</div></a></li>
-		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		    <div class="mui-media-body">圖片分享</div></router-link></li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            <router-link to="/home/goodslist">
 		    <span class="mui-icon mui-icon-chatbubble"></span>
-		    <div class="mui-media-body">商品購買</div></a></li>
+		    <div class="mui-media-body">商品購買</div></router-link></li>
 		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		    <span class="mui-icon mui-icon-location"></span>
 		    <div class="mui-media-body">留言反饋</div></a></li>

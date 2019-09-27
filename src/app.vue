@@ -41,6 +41,9 @@
 </script>
 
 <style>
+    .mint-header{
+        z-index:99
+    }
     .app-containers{
         padding-top:40px;
         overflow-x: hidden;

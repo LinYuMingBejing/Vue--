@@ -28,7 +28,7 @@ module.exports = {
             { test:/\.css$/, use:["style-loader", "css-loader"] }, //處理css文件的loader
             { test:/\.less$/, use:["style-loader","css-loader","less-loader"]}, //處理less文件的loader
             { test:/\.(jpg|png|gif|bmp|jpeg)$/, use :"url-loader?limit=7631&name=[name].[ext]"}, //處理圖片路徑的loader
-            // limit 給定的值。是圖片的大小，但衛視byte，如果我們引用的圖片，大於或等於給定的limit直，則不會轉為base64的字符串，如果圖片小於給定的直，則會被轉譯為base64字符串
+            // limit 給定的值。是圖片的大小，但未是byte，如果我們引用的圖片，大於或等於給定的limit直，則不會轉為base64的字符串，如果圖片小於給定的直，則會被轉譯為base64字符串
             { test:/\.scss$/, use:["style-loader","css-loader","sass-loader"]},
             { test:/\.(ttf|eot|svg|woff|woff2)$/,use:"url-loader"},
             { test:/\.js$/, use :["babel-loader"], exclude:/node_modules/}, // 這是配置babel來轉化高級語法

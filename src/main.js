@@ -16,9 +16,14 @@ Vue.prototype.$ajax = axios
 
 // 按需導入Mint-UI中的組件
 import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
+import 'mint-ui/lib/style.css'
 
+
+
+// 安裝圖片預覽插件
+import VuePreview from "vue-preview"
+Vue.use(VuePreview)
 // 1.3 導入自己的router.js路由模塊
 
 
@@ -32,6 +37,10 @@ import router from "./router.js"
 
 import app from "./App.vue"
 
+
+// 全局設置post時候表單數據格式組織形式
+
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 // 導入時間插件
 import moment from "moment"
 
