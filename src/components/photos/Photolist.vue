@@ -34,11 +34,11 @@
 
 <script>
 // 1. 導入mui.js文件
-// import mui from "../../lib/mui/js/mui.min.js"
+import mui from "../../lib/mui/js/mui.min.js"
 // // 2. 初始化滑動控件
-// mui(".mui-scroll-wrapper").scroll({
-//     deceleration:0.0005
-// })
+mui(".mui-scroll-wrapper").scroll({
+    deceleration:0.0005
+})
 export default {
     data(){
         return{
@@ -55,9 +55,9 @@ export default {
 		// 當組件中的DOM結構被渲染好並放到頁面中，會執行這個鉤子函數
 		// 如果要操作元素，最好再mounted，這時的DOM元素是最新的
 		// // 2. 初始化滑動控件
-		// mui(".mui-scroll-wrapper").scroll({
-		// 	deceleration:0.0005
-		// })
+		mui(".mui-scroll-wrapper").scroll({
+			deceleration:0.0005
+		})
 	},
     methods:{
 		getAllCategoty(){
