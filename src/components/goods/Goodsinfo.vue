@@ -111,7 +111,12 @@ export default {
         },
         addToShopCar(){
             //添加到購物車
-            this.ballFlag = !this.ballFlag
+            this.ballFlag = !this.ballFlag;
+            // 拼接出一個，要保存到store中car數組裡的商品信息 對象
+            var goodsinfo = { "id":this.id, "count":this.selectedCount, "price":this.goodsinfo.sell_price, "selected": true}
+            console.log(goodsinfo)
+            // 調用state中的mutations， 將商品加入購物車中
+            this.$store.commit("addToCar",goodsinfo)
         },
         beforeEnter(el){
             el.style.transform ="translate(0,0)"
